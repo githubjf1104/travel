@@ -1,6 +1,6 @@
 <template>
 	<div class="icons">
-		<swiper>
+		<swiper :options="swiperOption">
 			 <swiper-slide v-for="(page,index) of pages" 
 			 :key="index">
 				<div class="icon" v-for="item of page" 
@@ -20,51 +20,20 @@
 <script>
 export default {
 	name:'HomeIcons',
+	props:{
+		list:Array
+	},
 	data () {
 		return {
-			iconsList:[{
-			id:'0001',
-			imgUrl:'https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-			iconDesc:'热门景点'
-			},{
-				id:'0002',
-				imgUrl:'https://imgs.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-				iconDesc:'深圳必游'
-			},{
-				id:'0003',
-				imgUrl:'https://imgs.qunarzz.com/piao/fusion/1803/12/216ce2e78b5f5f02.png',
-				iconDesc:'世界之窗'
-			},{
-				id:'0004',
-				imgUrl:'https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-				iconDesc:'万圣狂欢'
-			},{
-				id:'0005',
-				imgUrl:'https://imgs.qunarzz.com/piao/fusion/1803/b6/37560ece9c62b502.png',
-				iconDesc:'东部华侨城'
-			},{
-				id:'0006',
-				imgUrl:'https://imgs.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png',
-				iconDesc:'海洋馆'
-			},{
-				id:'0007',
-				imgUrl:'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/b0026eb6f96fd2daecba0d7982c7e4c8.png',
-				iconDesc:'特惠深圳'
-			},{
-				id:'0008',
-				imgUrl:'https://imgs.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
-				iconDesc:'深圳欢乐谷'
-			},{
-				id:'0009',
-				imgUrl:'https://imgs.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-				iconDesc:'一日游'
-			}]
+			swiperOption:{
+				autoplay:false
+			}
 		}
 	},
 	computed:{
 		pages () {
 			const pages = []
-			this.iconsList.forEach((item, index) => {
+			this.list.forEach((item, index) => {
 				// 第几页
 				const page = Math.floor(index / 8)
 				if(!pages[page]){

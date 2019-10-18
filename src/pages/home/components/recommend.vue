@@ -2,7 +2,7 @@
 	<div class="recommend-title">
 		<div class="recommend-word">热销推荐</div>
 		<ul>
-			<li class="item" v-for="item of recommendList"
+			<li class="item" v-for="item of list"
 			:key="item.id">
 				<img class="item-img" :src="item.imgUrl"/>
 				<div class="item-info">
@@ -18,25 +18,8 @@
 <script>
 export default {
 	name:'HomeRecommend',
-	data () {
-		return {
-			recommendList:[{
-				id:'0001',
-				imgUrl:'https://imgs.qunarzz.com/sight/p0/1506/e8/e87354c876fd6c38.water.jpg_200x200_9c11d922.jpg',
-				title:'北宫国家深林公园',
-				desc:'五彩斑斓，层林尽染，分分钟随手一拍就是美图'
-			},{
-				id:'0002',
-				imgUrl:'https://imgs.qunarzz.com/sight/p0/201311/12/3e2de7e7f2fa170fc8d65eac.jpg_200x200_015edb8c.jpg',
-				title:'八达岭野生动物园',
-				desc:'五彩斑斓，层林尽染，分分钟随手一拍就是美图'
-			},{
-				id:'0003',
-				imgUrl:'https://imgs.qunarzz.com/sight/p0/1602/67/67feeab24cfc82bb90.water.jpg_200x200_af2a01b1.jpg',
-				title:'太平洋海底世界',
-				desc:'五彩斑斓，层林尽染，分分钟随手一拍就是美图'
-			}]
-		}
+	props:{
+		list:Array
 	}
 }
 </script>
@@ -63,17 +46,18 @@ export default {
 			padding:.1rem
 			min-width:0
 			.item-title
-				 line-height:.54rem
-				 font-size:.32rem
+				 line-height:.5rem
+				 font-size:.3rem
 				 ellipsis()
 			.item-desc
-				line-height:.5rem
+				line-height:.4rem
 				color:#ccc
 				ellipsis()
 			.item-button
 				line-height:.5rem
 				background:#ff9300
 				color:#fff
+				margin-bottom:.1rem
 				padding:0 .3rem
 				border-radius:0.2rem
 
