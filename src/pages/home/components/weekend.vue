@@ -36,7 +36,7 @@ export default {
 	.item-img-wrapper
 		overflow:hidden
 		height:0
-		padding-bottom:37.09%
+		padding-bottom:37.808%
 		.item-img
 			width:100%
 	.item-info
@@ -44,10 +44,11 @@ export default {
 		min-width:0
 		.item-title
 			 line-height:.54rem
-			 font-size:.32rem
+			 font-size:.3rem
 			 ellipsis()
 		.item-desc
 			line-height:.5rem
+			font-size: .26rem
 			color:#ccc
 			ellipsis()
 				
