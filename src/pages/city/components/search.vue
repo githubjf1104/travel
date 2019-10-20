@@ -15,7 +15,7 @@ export default {
 	@import '~@/assets/styles/varibles.styl'
 	.search
 		height:.72rem
-		padding:0 .1ren
+		padding:0 .1rem
 		background:$bgColor
 		.search-input
 			box-sizing:border-box
@@ -25,5 +25,5 @@ export default {
 			padding:0 .1rem
 			text-align:center
 			color:#666
-			border-radius:0.62rem
+			border-radius:0.06rem
 </style>
