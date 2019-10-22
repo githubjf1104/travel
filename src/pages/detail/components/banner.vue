@@ -27,7 +27,7 @@ export default {
 	data () {
 		return {
 			showGrallary: false,
-			imgs: ['http://img1.qunarzz.com/sight/p0/1807/33/3359ac3a4bdd2b30a3.water.jpg_350x240_4ec28049.jpg','http://img1.qunarzz.com/sight/p0/1412/4b/632fe62f622b9b112cdf9f3b80ce8f78.water.jpg_350x240_411eebed.jpg']
+			imgs: ['//img1.qunarzz.com/sight/p0/1910/1c/1c8f8e8a50115fa6a3.water.jpg_600x330_0f100cf2.jpg','http://img1.qunarzz.com/sight/p0/1807/33/3359ac3a4bdd2b30a3.water.jpg_350x240_4ec28049.jpg','http://img1.qunarzz.com/sight/p0/1412/4b/632fe62f622b9b112cdf9f3b80ce8f78.water.jpg_350x240_411eebed.jpg']
 		}
 	},
 	methods: {
