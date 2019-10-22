@@ -9,9 +9,9 @@
 			<div class="iconfont back-header-abs">&#xe624;</div>
 		</router-link>
 		<div 
-		class="header-fixed" 
-		v-show="!showAbs"
-		:style="opacityStyle"
+			class="header-fixed" 
+			v-show="!showAbs"
+			:style="opacityStyle"
 		>
 			<router-link to="/">
 				<div class="iconfont header-fixed-back">&#xe624;</div>
@@ -33,6 +33,7 @@ export default {
 	},
 	methods: {
 		handleScroll () {
+			console.log('scroll')
 			const top = document.documentElement.scrollTop
 			if (top > 60) {
 				let opacity = top / 140
@@ -46,6 +47,9 @@ export default {
 	},
 	activated () {
 		window.addEventListener('scroll', this.handleScroll)
+	},
+	deactivated () {
+		window.removeEventListener('scroll', this.handleScroll)
 	}
 
 }
